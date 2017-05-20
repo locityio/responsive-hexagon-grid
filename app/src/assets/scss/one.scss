@@ -1,0 +1,39 @@
+@import 'styles';
+@import 'hexagon_grid';
+
+$break-xs-min: 0px;
+$break-xs-max: 599px;
+$break-sm-min: 600px;
+$break-sm-max: 899px;
+$break-md-min: 900px;
+$break-md-max: 1199px;
+
+/*
+@include hexagon-inner-grid(2, 0);
+@include hexagon-outer-grid(2, 0);
+*/
+
+@media screen and (min-width: $break-xs-min) and (max-width: $break-xs-max) {
+  @include hexagon-grid(6, 1);
+}
+@media screen and (min-width: $break-sm-min) and (max-width: $break-sm-max) {
+  @include hexagon-grid(7, 2);
+}
+@media screen and (min-width: $break-md-min) and (max-width: $break-md-max) {
+  @include hexagon-grid(8, 3);
+}
+@media screen and (min-width: $break-md-max) {
+  @include hexagon-grid(9, 4);
+}
+
+body {
+  padding: 7%;
+}
+
+
+.content {
+  text-align: center;
+  font-size: 30px;
+  width: 100%;
+  height: 100%;
+}
