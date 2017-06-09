@@ -35,7 +35,8 @@ gulp.task('copy', () => {
      'src/*.json',
      'src/*.ico',
      'src/*.png',
-     'src/*.svg'
+     'src/*.svg',
+     'src/CNAME'
    ])
    .pipe(gulp.dest('dist'));
 });
